@@ -659,7 +659,7 @@
     </div>
 
     <script>
-        const API_BASE = 'http://localhost:3000/api';
+        const API_BASE = '/api';
         let currentResults = null;
         let currentFilter = 'all';
         let isDarkMode = false;
@@ -704,7 +704,7 @@
                     throw new Error('API not responding');
                 }
             } catch (error) {
-                statusEl.textContent = '✗ API Disconnected - Start server first!';
+                statusEl.textContent = '✗ API Disconnected';
                 statusEl.style.background = 'rgba(244, 67, 54, 0.3)';
             }
         }
@@ -784,7 +784,7 @@
                     <div class="error-message">
                         ❌ Error: ${error.message}
                         <br><br>
-                        Make sure the backend server is running on port 3000!
+                        Please check your connection and try again.
                     </div>
                 `;
             } finally {
